@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .chat-container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        #chat-output {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fafafa;
+        }
+        .user-message {
+            text-align: right;
+            margin: 5px;
+            background-color: #dcf8c6;
+            display: inline-block;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .chatgpt-response {
+            text-align: left;
+            margin: 5px;
+            background-color: #f1f0f0;
+            display: inline-block;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="text"] {
+            width: calc(100% - 70px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat with ChatGPT</h1>
+        <div id="chat-output"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Enter your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').onsubmit = async function (e) {
+            e.preventDefault();
+            const userInput = document.getElementById('user-input').value;
+            const response = await fetch("/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ user_input: userInput })
+            });
+            const data = await response.json();
+            const chatOutput = document.getElementById('chat-output');
+            chatOutput.innerHTML += `<div class="user-message">${userInput}</div>`;
+            chatOutput.innerHTML += `<div class="chatgpt-response">${data.response}</div>`;
+            document.getElementById('user-input').value = '';
+        }
+    </script>
+</body>
+</html>
+
+

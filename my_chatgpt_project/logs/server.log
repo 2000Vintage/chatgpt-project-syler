@@ -1,0 +1,117 @@
+2024-08-06 09:34:38,582 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 09:34:38,582 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 09:34:53,620 - sync_logger - INFO - Received input: 你好
+2024-08-06 09:34:54,655 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 09:34:54,659 - sync_logger - INFO - OpenAI API call successful: 你好！有什么可以帮助你的吗？
+2024-08-06 09:35:08,180 - sync_logger - INFO - Received input: 请帮我给我的宠物取个名字
+2024-08-06 09:35:09,421 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 09:35:09,422 - sync_logger - INFO - OpenAI API call successful: 当然，请告诉我你的宠物是什么动物，以及它的性格特点，我可以帮你想一个名字。
+2024-08-06 09:35:57,242 - sync_logger - INFO - Received input: 我的宠物是一只狗，他很温顺很可爱
+2024-08-06 09:35:59,163 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 09:35:59,164 - sync_logger - INFO - OpenAI API call successful: 那真是太棒了！狗狗是非常忠诚和可爱的伙伴。记得给他足够的爱和关怀，保持他的健康和快乐。有任何关于狗狗护理的问题，都可以问我哦！
+2024-08-06 09:36:15,699 - sync_logger - INFO - Received input: 请帮我给它取个名字
+2024-08-06 09:36:16,743 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 09:36:16,744 - sync_logger - INFO - OpenAI API call successful: 当然，请告诉我这个需要取名字的事物是什么？
+2024-08-06 09:52:34,783 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 09:52:34,783 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 09:52:46,376 - sync_logger - INFO - Received input: 请介绍一下霍金
+2024-08-06 09:52:48,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 09:52:48,650 - sync_logger - INFO - OpenAI API call successful: 史蒂芬·威廉·霍金（Stephen William Hawking）是一位英国理论物理学家和宇宙学家，被认为是现代宇宙学和黑洞研究领域最杰出的科学家之一。霍金于1942年1月8日出生在英国牛津，他在剑桥大学攻读物理学博士学位，后来成为了剑桥大学的卡文迪许实验室的研究员
+2024-08-06 10:25:17,762 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 10:25:17,763 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 10:25:20,987 - sync_logger - INFO - Received input: 英国女王今年多少岁
+2024-08-06 10:25:22,200 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 10:25:22,203 - sync_logger - INFO - OpenAI API call successful: 英国女王伊丽莎白二世今年出生于1926年，所以她在2022年是96岁。
+2024-08-06 13:34:26,667 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 13:34:26,668 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 13:34:35,490 - hypercorn.error - ERROR - Error in ASGI Framework
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/hypercorn/asyncio/task_group.py", line 27, in _handle
+    await app(scope, receive, send, sync_spawn, call_soon)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/hypercorn/app_wrappers.py", line 34, in __call__
+    await self.app(scope, receive, send)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1667, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1693, in asgi_app
+    await asgi_handler(receive, send)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py", line 52, in __call__
+    raise_task_exceptions(done)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/utils.py", line 180, in raise_task_exceptions
+    raise task.exception()
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py", line 100, in handle_request
+    response = await _handle_exception(self.app, error)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py", line 357, in _handle_exception
+    raise error
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py", line 98, in handle_request
+    response = await self.app.handle_request(request)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1407, in handle_request
+    return await self.handle_exception(error)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1441, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1029, in handle_user_exception
+    raise error
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1439, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+  File "/root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/app.py", line 1535, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore
+  File "/root/my_chatgpt_project/app.py", line 25, in index
+    start_timer, end_timer = track_request_metrics("index")  # 跟踪指标
+ValueError: too many values to unpack (expected 2)
+2024-08-06 23:05:22,726 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 23:05:22,727 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 23:05:37,418 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 23:05:37,418 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 23:05:46,841 - sync_logger - INFO - Received input: who is stephen curry
+2024-08-06 23:05:51,397 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 23:09:13,269 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 23:09:13,269 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 23:09:21,355 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-06 23:09:21,355 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-06 23:09:28,391 - sync_logger - INFO - Received input: hello
+2024-08-06 23:09:29,496 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 23:09:29,507 - sync_logger - INFO - OpenAI API call successful: Hello! How can I assist you today?
+2024-08-06 23:09:44,916 - sync_logger - INFO - Received input: 中国的面积有多大
+2024-08-06 23:09:46,808 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-06 23:09:46,811 - sync_logger - INFO - OpenAI API call successful: 中国的总面积约为9.6百万平方公里，是世界上面积第三大的国家。
+2024-08-07 08:14:48,393 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 08:14:48,394 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 08:16:15,733 - sync_logger - INFO - Received input: hi
+2024-08-07 08:16:16,753 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 08:16:16,757 - sync_logger - INFO - OpenAI API call successful: Hello! How can I assist you today?
+2024-08-07 08:29:24,461 - sync_logger - INFO - Received input: 今天周几
+2024-08-07 08:29:25,503 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 08:29:25,506 - sync_logger - INFO - OpenAI API call successful: 今天是周五。
+2024-08-07 08:29:43,441 - sync_logger - INFO - Received input: 今天是2024年8月7日
+2024-08-07 08:29:44,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 08:29:44,697 - sync_logger - INFO - OpenAI API call successful: 很抱歉，作为一个语言模型AI助手，我无法获取实时信息。如果您有任何其他问题或需要帮助，请随时告诉我。
+2024-08-07 09:14:38,346 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 09:14:38,347 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 09:14:45,465 - sync_logger - INFO - Received input: 你好
+2024-08-07 09:14:46,454 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 09:14:46,462 - sync_logger - INFO - OpenAI API call successful: 你好！有什么可以帮助你的吗？
+2024-08-07 09:40:00,411 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 09:40:00,412 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 09:40:07,511 - sync_logger - INFO - Received input: hi
+2024-08-07 09:40:08,696 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 09:40:08,700 - sync_logger - INFO - OpenAI API call successful: Hello! How can I assist you today?
+2024-08-07 09:47:25,619 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 09:47:25,619 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 09:57:21,130 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 09:57:21,130 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 09:57:27,405 - sync_logger - INFO - Received input: 你好
+2024-08-07 09:57:28,326 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 09:57:28,330 - sync_logger - INFO - OpenAI API call successful: 你好！有什么可以帮助你的吗？
+2024-08-07 16:22:03,159 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 5000)>,)> is serving
+2024-08-07 16:22:03,159 - hypercorn.error - INFO - Running on http://0.0.0.0:5000 (CTRL + C to quit)
+2024-08-07 22:55:55,897 - asyncio - WARNING - Executing <Task pending name='Task-29' coro=<ASGIHTTPConnection.handle_request() running at /root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py:107> wait_for=<Future pending cb=[Task.task_wakeup()] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/base_events.py:429> cb=[_wait.<locals>._on_completion() at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:475] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:636> took 0.138 seconds
+2024-08-07 22:55:58,067 - sync_logger - INFO - Received input: 你好
+2024-08-07 22:55:58,300 - asyncio - WARNING - Executing <Task pending name='Task-39' coro=<ASGIHTTPConnection.handle_request() running at /root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py:98> cb=[_wait.<locals>._on_completion() at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:475, WorkerThread.stop()] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:636> took 0.205 seconds
+2024-08-07 22:55:58,809 - asyncio - WARNING - Executing <Task pending name='Task-39' coro=<ASGIHTTPConnection.handle_request() running at /root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py:98> cb=[_wait.<locals>._on_completion() at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:475, WorkerThread.stop()] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:636> took 0.175 seconds
+2024-08-07 22:55:59,864 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 22:55:59,997 - sync_logger - INFO - OpenAI API call successful: 你好！有什么可以帮助你的吗？
+2024-08-07 22:55:59,997 - asyncio - WARNING - Executing <Task pending name='Task-39' coro=<ASGIHTTPConnection.handle_request() running at /root/miniconda3/envs/py310/lib/python3.10/site-packages/quart/asgi.py:98> wait_for=<Task pending name='Task-43' coro=<Logger.handle() running at /root/miniconda3/envs/py310/lib/python3.10/site-packages/aiologger/logger.py:163> cb=[Task.task_wakeup()] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:337> cb=[_wait.<locals>._on_completion() at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:475, WorkerThread.stop()] created at /root/miniconda3/envs/py310/lib/python3.10/asyncio/tasks.py:636> took 0.131 seconds
+2024-08-07 22:56:08,065 - sync_logger - INFO - Received input: hi
+2024-08-07 22:56:09,276 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-07 22:56:09,277 - sync_logger - INFO - OpenAI API call successful: Hello! How can I assist you today?
